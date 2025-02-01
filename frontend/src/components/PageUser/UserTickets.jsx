@@ -85,8 +85,10 @@ const UserTicketsModal = ({ closeModal }) => {
                 className="border p-3 rounded-lg shadow-md hover:shadow-lg transition"
               >
                 <h2 className="text-lg font-semibold text-red-600">
-                  {ticket.match_id.teamHome} VS {ticket.match_id.teamAway}
+                  {ticket.match_id?.teamHome ?? "Tim Tidak Diketahui"} VS{" "}
+                  {ticket.match_id?.teamAway ?? "Tim Tidak Diketahui"}
                 </h2>
+
                 <p className="text-gray-600 text-sm">
                   Kategori: {ticket.kategori_tiket} | Jumlah: {ticket.jumlah}{" "}
                   tiket
